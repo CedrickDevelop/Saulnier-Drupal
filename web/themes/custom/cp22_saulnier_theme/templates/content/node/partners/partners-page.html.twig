@@ -1,0 +1,19 @@
+<div class="PartnersWrapper PartnersItem" style="display: flex;flex-direction: column">
+
+  <h2>{{ title }}</h2>
+
+  {{ list_partners }}
+
+
+  {% for node in list_partners|at_children %}
+
+  <div class="PartnersItem-logo" style="display: inline-block">
+      {{ node }}
+  </div>
+
+  <div class="PartnersItem-name">
+    {{ name }}
+  </div>
+
+  {% endfor %}
+</div>

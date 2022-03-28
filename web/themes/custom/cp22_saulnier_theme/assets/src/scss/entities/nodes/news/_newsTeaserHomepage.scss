@@ -1,0 +1,57 @@
+.NodeNewsTeaserHome {
+  width:100%;
+  margin-bottom: 1rem;
+
+  &-link {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .NodeNewsWrapper {
+
+      &-contentWrapper {
+        width: 53rem;
+        padding: 1.8rem 0 1.8rem 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .NewsContent {
+          &-theme {
+            margin-bottom: 1rem;
+
+            p {
+              font-size: 2rem;
+              line-height: 2.4rem;
+
+              text-transform: uppercase;
+              color: $color-text-blue-light;
+            }
+
+          }
+
+          &-title {
+            margin-bottom: 1rem;
+            font-size: 3rem;
+            line-height: 3.6rem;
+
+            color: $color-white;
+          }
+        }
+
+      }
+
+      &-cover {
+
+      }
+    }
+
+
+
+  }
+
+
+
+}

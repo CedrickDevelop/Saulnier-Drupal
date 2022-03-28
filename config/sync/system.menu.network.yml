@@ -1,0 +1,8 @@
+uuid: 3307a168-ed86-4051-a228-e7bfb1410a64
+langcode: fr
+status: true
+dependencies: {  }
+id: network
+label: 'Réseau social'
+description: ''
+locked: false

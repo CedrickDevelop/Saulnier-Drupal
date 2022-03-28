@@ -1,0 +1,5 @@
+services:
+  Drupal\cp22_saulnier_socials\Manager\SocialsTermsManager:
+    class: Drupal\cp22_saulnier_socials\Manager\SocialsTermsManager
+    arguments: [ '@entity_type.manager',
+                 '@Drupal\cp22_saulnier_global\Gateway\BasicListOfTaxonomyTermsGateway' ]

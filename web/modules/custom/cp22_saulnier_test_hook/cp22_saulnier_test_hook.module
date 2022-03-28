@@ -1,0 +1,62 @@
+<?php
+
+use Drupal\node\NodeInterface;
+
+
+/**
+ * Implementation of hook_preprocess_HOOK().
+ */
+function cp22_saulnier_test_preprocess_node(&$variables){
+
+  /** @var NodeInterface $node */
+
+  $node = $variables['node'];
+
+  // Instanciation des entités
+  /** @var \Drupal\core\Entity\EntityTypeManagerInterface $etm */
+  $etm = Drupal::EntityTypeManager();
+
+
+
+  // On accède au storage du node
+  $nodeStorage = $etm->getStorage('node');
+  $query = $nodeStorage->getQuery();
+
+  // Pour afficher les nodes publiés on utilise le status publié
+  $query->condition('status', NodeInterface::PUBLISHED);
+
+  // On choisit la condition du type de node à recuperer
+  $query->condition('type', 'news');
+
+
+  // On execute la requete pour recuperer les informations
+//  On recuperer une liste d'ids'
+  $newsList = $query->execute();
+
+
+  // On charge les nodes en fonction de l'id que l'on a recherché précédemment
+  $newsList = $nodeStorage->loadMultiple($newsList);
+
+    /** @var NodeInterface $news */
+  foreach ($newsList as $news){
+    var_dump($news->getTitle());
+  }
+
+
+  $variables['newsList'] = $newsList;
+
+
+
+
+
+  // Une fois la variable definit elle est transmise directement au template
+
+  //  voir le template node--news-list
+
+  // La variable qui part vers le template c'est ce qui est entre crochets
+
+
+
+}
+
+

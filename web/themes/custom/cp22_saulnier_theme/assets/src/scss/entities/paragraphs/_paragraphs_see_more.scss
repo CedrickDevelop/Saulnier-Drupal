@@ -1,0 +1,38 @@
+.ParagraphSeeMore {
+
+  max-width: $site-content-max-width;
+  @extend %_paragraphDefault;
+
+  &-title {
+    text-align: center;
+    color: $color-textBlue;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+
+  }
+
+  &-ascent {
+
+    .NodePosition {
+      &-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    }
+    //.NodeWrapper {
+    //  min-width: 37.5rem;
+    //}
+
+  }
+}

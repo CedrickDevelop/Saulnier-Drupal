@@ -1,0 +1,22 @@
+uuid: be427ced-f37d-492f-a541-2ff69d72aa27
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.project_edito
+id: node.project_edito.sticky
+field_name: sticky
+entity_type: node
+bundle: project_edito
+label: 'Epinglé en haut des listes'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

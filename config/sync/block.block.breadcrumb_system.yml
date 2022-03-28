@@ -1,0 +1,24 @@
+uuid: f8bb1523-04b4-4fc5-8b83-2a2acac6265e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cp22_saulnier_theme
+id: breadcrumb_system
+theme: cp22_saulnier_theme
+region: breadcrumb
+weight: -1
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Fils d''ariane'
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/search\r\n/recherche-site\r\n/partenaires\r\n/thematiques/*"

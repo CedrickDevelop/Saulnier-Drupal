@@ -1,0 +1,15 @@
+uuid: de9f860e-649c-4d8b-abd7-8077663dbb44
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_wysiwyg.png
+id: wysiwyg
+label: 'Texte riche'
+icon_uuid: null
+icon_default: null
+description: 'C''est un contenu complet correspondant au corps de la page'
+behavior_plugins: {  }

@@ -1,0 +1,15 @@
+uuid: 20d35bd6-7755-40f1-9bd0-5036806e1f70
+langcode: fr
+status: true
+dependencies: {  }
+name: teaser_news_homepage_x2
+label: 'Teaser News Homepage (280x280)'
+effects:
+  8b02e156-6f61-4a6b-af1a-e10e004d3655:
+    uuid: 8b02e156-6f61-4a6b-af1a-e10e004d3655
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 280
+      height: 280
+      anchor: center-center

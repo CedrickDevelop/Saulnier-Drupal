@@ -1,0 +1,29 @@
+uuid: e878547c-c985-4d6d-8e25-7ce095387038
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_visual
+    - media.type.image
+    - paragraphs.paragraphs_type.cta
+id: paragraph.cta.field_visual
+field_name: field_visual
+entity_type: paragraph
+bundle: cta
+label: Visuel
+description: 'Taille minimum recommandée : 1440x940'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

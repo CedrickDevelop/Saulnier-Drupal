@@ -1,0 +1,24 @@
+services:
+  Drupal\cp22_saulnier_news\Manager\NewsManager:
+    class: Drupal\cp22_saulnier_news\Manager\NewsManager
+    arguments: [ '@entity_type.manager',
+                 '@Drupal\cp22_saulnier_global\Manager\BasicListOfNodesManager']
+
+  Drupal\cp22_saulnier_news\Manager\DatesManager:
+    class: Drupal\cp22_saulnier_news\Manager\DatesManager
+
+  # Managers for news
+  cp22_saulnier_news.news_taxo_manager:
+    class: Drupal\cp22_saulnier_news\Manager\NewsTermsManager
+    arguments: ['@entity_type.manager',
+                '@Drupal\cp22_saulnier_global\Gateway\BasicListOfTaxonomyTermsGateway']
+
+  #Breadcrumb
+  Drupal\cp22_saulnier_news\Breadcrumb\NewsBreadcrumbBuilder:
+    class: Drupal\cp22_saulnier_news\Breadcrumb\NewsBreadcrumbBuilder
+    arguments: ['@language_manager',
+                '@request_stack',
+                '@title_resolver',
+                '@Drupal\cp22_saulnier_news_list\Manager\NewsListManager']
+    tags:
+      - { name: breadcrumb_builder, priority: 1011 }

@@ -1,0 +1,214 @@
+uuid: 550458a9-5c2c-4e1c-8f1c-c5572de3a3c2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.eb_project_edito_partners
+    - field.field.node.project_edito.field_intro_text
+    - field.field.node.project_edito.field_main_picture
+    - field.field.node.project_edito.field_paragraphs
+    - field.field.node.project_edito.field_partners
+    - field.field.node.project_edito.field_topic
+    - node.type.project_edito
+  module:
+    - entity_browser
+    - field_group
+    - media_library
+    - paragraphs_browser
+    - path
+third_party_settings:
+  field_group:
+    group_presentation:
+      children:
+        - title
+        - field_main_picture
+        - field_intro_text
+      label: Présentation
+      region: content
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: horizontal
+        width_breakpoint: '640'
+    group_content:
+      children:
+        - field_paragraphs
+        - field_topic
+      label: Contenu
+      region: content
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: horizontal
+        width_breakpoint: 640
+    group_tabs:
+      children:
+        - langcode
+        - group_presentation
+        - group_content
+      label: Onglets
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_add_on:
+      children:
+        - promote
+        - status
+        - uid
+        - created
+        - path
+      label: 'informations complémentaires'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.project_edito.default
+targetEntityType: node
+bundle: project_edito
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_intro_text:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_main_picture:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_paragraphs:
+    type: paragraphs_browser
+    weight: 30
+    region: content
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: '0'
+      add_mode: paragraphs_browser
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
+      paragraphs_browser: content
+      modal_width: 80%
+      modal_height: auto
+    third_party_settings: {  }
+  field_partners:
+    type: entity_browser_entity_reference
+    weight: 32
+    region: content
+    settings:
+      entity_browser: eb_project_edito_partners
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings:
+        view_mode: teaser_page
+      selection_mode: selection_append
+    third_party_settings: {  }
+  field_topic:
+    type: options_buttons
+    weight: 31
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  sticky: true
+  url_redirects: true

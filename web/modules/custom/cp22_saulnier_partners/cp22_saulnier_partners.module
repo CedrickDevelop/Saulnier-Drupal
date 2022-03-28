@@ -1,0 +1,26 @@
+<?php
+
+use Drupal\cp22_saulnier_partners\Manager\PartnersTermsManager;
+
+/**
+ *   Register a module or theme's theme implementations.
+ *   see the documentation for hook_theme
+ *  @param array $existing
+ *  @param $type
+ *  @param $theme
+ *  @param $path
+ *
+ *  @return array
+ */
+function cp22_saulnier_partners_theme(array $existing, $type, $theme, $path): array {
+  return [
+    'partners_slider' => [
+      'variables' => ['partners' => NULL ]
+    ],
+    'partners_page' => [
+      'variables' =>  [
+        'list_partners' => NULL,
+        'title' =>  NULL ]
+    ]
+  ];
+}

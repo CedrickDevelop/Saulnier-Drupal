@@ -1,0 +1,33 @@
+uuid: 1816d7be-9a2f-4369-966a-e530b6ff4b08
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.see_more.field_bloc_description
+    - field.field.paragraph.see_more.field_riseup
+    - field.field.paragraph.see_more.field_title
+    - paragraphs.paragraphs_type.see_more
+id: paragraph.see_more.default
+targetEntityType: paragraph
+bundle: see_more
+mode: default
+content:
+  field_riseup:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_bloc_description: true

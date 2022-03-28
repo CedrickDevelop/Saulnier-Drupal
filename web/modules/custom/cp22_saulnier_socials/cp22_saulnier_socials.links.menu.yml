@@ -1,0 +1,23 @@
+#### Page taxonomie -- Réseaux sociaux
+cp22_saulnier_socials.socials:
+  title: "Réseaux sociaux"
+  parent: cp22_saulnier_global.taxonomie
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/network/overview
+  weight: 2
+
+cp22_saulnier_socials.socials.add:
+  title: "Ajouter un réseau social"
+  parent: cp22_saulnier_socials.socials
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/network/add
+  weight: 0
+
+
+cp22_saulnier_partners.partners.show:
+  title: "Voir la liste des réseaux sociaux"
+  parent: cp22_saulnier_socials.socials
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/network/overview
+  weight: 1
+

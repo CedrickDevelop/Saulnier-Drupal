@@ -1,0 +1,20 @@
+uuid: f414fc01-5d8a-4142-8c5c-6f94a8cb32fb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.network
+  module:
+    - text
+id: taxonomy_term.network.description
+field_name: description
+entity_type: taxonomy_term
+bundle: network
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

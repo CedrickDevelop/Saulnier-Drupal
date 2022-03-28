@@ -1,0 +1,22 @@
+uuid: fd628052-5d22-4158-b7d6-b59f49c36806
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.project_edito
+id: node.project_edito.status
+field_name: status
+entity_type: node
+bundle: project_edito
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

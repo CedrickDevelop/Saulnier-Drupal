@@ -1,0 +1,35 @@
+uuid: a296b2d7-9a82-4f5c-94fc-59cb53232b0a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.field_chapo
+    - field.field.node.news.field_content
+    - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_theme
+    - field.field.node.news.field_visual
+    - node.type.news
+  module:
+    - user
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content:
+  field_visual:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: teaser_720
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_chapo: true
+  field_content: true
+  field_meta_tags: true
+  field_theme: true
+  langcode: true
+  links: true

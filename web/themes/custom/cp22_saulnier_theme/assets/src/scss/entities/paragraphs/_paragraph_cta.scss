@@ -1,0 +1,73 @@
+.ParagraphCta{
+
+  @extend %_paragraphDefault;
+  max-width: $site-image-width;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+
+  // Le titre dans la box
+  &-title {
+    width: 100%;
+    color:$color-white;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 11;
+
+
+    h2 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 3rem;
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+
+    h3::after {
+      content:"\f061";
+      @extend %_fontAwesomeBase;
+      font-size: 4rem;
+      margin-left: 2rem;
+      color: $color-text-red;
+
+    }
+  }
+
+
+
+
+
+  // Le filtre bleu
+  &::after {
+    content:"";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color:$color-menu-blue-medium-light;
+    z-index: 10;
+  }
+
+  &-bg {
+    width:100%;
+    height: 100%;
+
+    a {
+      width:100%;
+      height: 100%;
+
+      img {
+        width:100%;
+        margin: auto;
+        object-fit: cover;
+
+      }
+    }
+  }
+}

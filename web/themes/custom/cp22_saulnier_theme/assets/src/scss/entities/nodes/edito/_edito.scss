@@ -1,0 +1,79 @@
+//Mode Teaser
+
+
+
+.NodeEditoTeaser {
+
+  height: 48rem;
+  width: 720rem;
+  max-width: 72rem;
+  margin-bottom: 6rem;
+
+  &-image {
+    height:30rem;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+
+  }
+
+  &-contentWrapper {
+
+    padding:4.5rem;
+    word-break: normal;
+    box-shadow: 0 0.3rem 3.6rem $color-shadow-light-grey ;
+
+    @include screenMaxWidth(1150px) {
+      &-title a {
+        font-size: 2.6rem;
+      }
+    }
+
+    @include screenMaxWidth(1000px) {
+      &-title a {
+        font-size: 2.4rem;
+      }
+    }
+
+    @include screenMaxWidth(800px) {
+      padding: 3rem;
+      &-title a {
+        font-size: 2.3rem;
+      }
+    }
+
+    @include screenMaxWidth(900px) {
+      padding: 2rem;
+      &-title a {
+        font-size: 2.2rem;
+      }
+    }
+
+    .contentWrapper-title {
+        text-align: left;
+        margin-bottom: 1rem;
+
+      a {
+        font-size: 3rem;
+        line-height: 3.6rem;
+        font-weight: bold;
+        color:$color-menu-blue;
+      }
+
+    }
+
+    .contentWrapper-link {
+      @include button-homepage-blue(
+          21.3rem, 62.9rem, -0.2rem);
+      a {
+
+      }
+
+
+    }
+  }
+}
+

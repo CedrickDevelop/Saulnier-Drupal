@@ -1,0 +1,20 @@
+uuid: c99dccdf-9b04-440b-a465-14018dc5ba7a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.project_edito
+  module:
+    - path
+id: node.project_edito.path
+field_name: path
+entity_type: node
+bundle: project_edito
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

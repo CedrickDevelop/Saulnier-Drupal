@@ -1,0 +1,159 @@
+
+.display_block {
+  display: block;
+}
+
+.Header-menuMain {
+
+  flex-grow: 1;
+  padding-left: 9rem;
+  height: 100%;
+  z-index: 200;
+
+  @include tablet {
+    height: auto;
+    padding: 0;
+  }
+
+  & > nav {
+    height: 100%;
+    @include tablet {
+      height: auto;
+    }
+  }
+
+  &-itemList {
+    position: relative;
+    margin-right: 6rem;
+    @include tablet {
+      margin-right: 0;
+    }
+
+
+    .btn-liens-menu {
+      @include tablet {
+        float:right;
+      }
+
+    }
+
+    .far {
+      color: $color-textBlue;
+    }
+
+    .fa-arrow-up, .fa-arrow-down {
+      cursor: pointer;
+      @extend %_displayNone;
+    }
+    @include tablet {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .fa-arrow-down {
+        display: block;
+      }
+    }
+
+    @include screenMaxWidth(1600px) {
+      margin-right: 4rem;
+    }
+    @include screenMaxWidth(1470px) {
+      margin-right: 2rem;
+    }
+    @include tablet {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include tablet {
+      padding: 2rem;
+      border-bottom: 1px solid $color-white;
+      height: auto;
+    }
+  }
+
+  &-link {
+    color: $color-textBlue;
+    font-size: 2rem;
+
+    @extend %_fontBodyBold;
+    text-transform: uppercase;
+
+    @include screenMaxWidth(1470px) {
+      font-size: 1.8rem;
+    }
+    @include screenMaxWidth(1300px) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &-firstLevel {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @include tablet {
+      display: block;
+    }
+
+    & > .Header-menuMain-itemList {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      @include tablet {
+        display: block;
+      }
+
+      &.js-open{
+
+        @include tablet {
+          padding: 2rem 2rem 0 2rem;
+        }
+
+
+        .Header-menuMain-secondLevel {
+
+          display: block;
+          @include tablet {
+            padding: 1rem 0 0 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  &-secondLevel {
+    @extend %_displayNone;
+    position: absolute;
+    top: 100%;
+    width: 28rem;
+    background-color: $color-greyBackground;
+
+    @include tablet {
+      position: initial;
+    }
+
+
+    .Header-menuMain{
+      &-itemList {
+        min-height: 4rem;
+        line-height: 2.5rem;
+        padding: 1.5rem;
+        border-bottom: 0.1rem solid $color-white;
+      }
+      &-link {
+        display: block;
+        padding: 0 2rem;
+        font-size: 1.8rem;
+        text-transform: none;
+      }
+    }
+
+
+  }
+}

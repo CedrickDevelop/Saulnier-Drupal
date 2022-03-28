@@ -1,0 +1,10 @@
+uuid: 52f72b34-51d2-40d4-afd0-7500caac499c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.cover_color
+label: 'Cover colorisée'
+targetEntityType: media
+cache: true

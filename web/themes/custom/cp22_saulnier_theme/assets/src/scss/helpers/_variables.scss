@@ -1,0 +1,82 @@
+//Size referencees
+$small-mobile-width:375px;
+$mobile-width: 719px;
+$tablet-width: 1249px; //largeur avec le padding 70px
+$desktop-width: 1920px;
+
+//Size content referencees
+$site-content-max-width: 1466px; // Largeur que l'on veut mettre(1396px) + les paddings(70px)
+$site-content-width: 1396px;
+$site-image-width: 1115px;
+
+//Size home referencees
+$homepage-desktop-content-width: 71.9rem;
+$homepage-desktop-margin-left: 14rem;
+
+$homepage-breakpoint-1850 : 1850px;
+$homepage-margin-breakpoint-1850 : 10rem;
+
+$homepage-breakpoint-1700 : 1700px;
+$homepage-margin-breakpoint-1700 : 5rem;
+
+$homepage-breakpoint-1650 : 1650px;
+$homepage-margin-left-breakpoint-1650 : 0;
+$homepage-width-1650-block-left : 60rem;
+
+$homepage-breakpoint-1530 : 1530px;
+
+$homepage-breakpoint-1380 : 1380px;
+$homepage-width-1380-block-left : 50rem;
+
+$homepage-breakpoint-1225 : 1225px;
+
+$homepage-breakpoint-mobile : 1120px;
+$homepage-breakpoint-mobile-900 : 900px;
+$homepage-breakpoint-mobile-750 : 750px;
+$homepage-breakpoint-mobile-630 : 630px;
+$homepage-breakpoint-mobile-500 : 500px;
+
+
+
+
+//colors
+$color-black: black;
+$color-black-light: rgba(0, 0, 0, 0.46);
+$color-white: white;
+$color-textBlue: #004A98;
+$color-text-red: #DC051C;
+$color-text-grey: #626262;
+$color-text-blue-light: #91BCFF;
+
+
+$color-text-blue-very-light: rgba( 145, 188, 255, 0.5);
+$color-text-grey-light: rgba( 198, 200, 203, 0.5);
+
+
+
+$color-greyBackground: #e9edf2;
+$color-breadcrumb-red: #DC051C;
+$color-breadcrumb-dark-grey: rgba( 8, 45, 86, 0.8);
+
+$color-menu-blue: #004A98;
+$color-menu-blue-light: rgba( 0, 122, 255, 0.1 );
+$color-menu-blue-medium-light: rgba( 0, 122, 255, 0.5 );
+
+$color-shadow-light-grey : #00000040;
+
+$color-homepage-block :  #013B7B;
+
+$color-homepage-button-red : #DC051C;
+
+$color-form-blue_light: rgba( 0, 122, 255, 0.1 );
+//$color-black-mainBG: black;
+//$color-red: #df0020;
+//$color-gold: #caa469;
+//$color-gold-light: #f3eeda;
+//$color-red-font: #d6001a;
+
+
+//fonts
+$font-body: 'Fira Sans',arial;
+$font-title: 'Fira Sans',arial;
+$font-awesome : 'Font Awesome 5 Pro';

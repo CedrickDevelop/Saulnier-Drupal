@@ -1,0 +1,18 @@
+uuid: 8091a49e-8e80-4139-99ed-130e78acfa95
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.see_more
+id: paragraph.see_more.created
+field_name: created
+entity_type: paragraph
+bundle: see_more
+label: 'Écrit le'
+description: 'Heure de création du paragraphe.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

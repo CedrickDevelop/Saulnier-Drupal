@@ -1,0 +1,40 @@
+uuid: e773c874-eab7-4e7f-9712-4270026b3b4e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.project_edito.field_intro_text
+    - field.field.node.project_edito.field_main_picture
+    - field.field.node.project_edito.field_paragraphs
+    - field.field.node.project_edito.field_partners
+    - field.field.node.project_edito.field_topic
+    - node.type.project_edito
+  module:
+    - user
+id: node.project_edito.teaser
+targetEntityType: node
+bundle: project_edito
+mode: teaser
+content:
+  field_main_picture:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: teaser_edito
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_intro_text: true
+  field_paragraphs: true
+  field_partners: true
+  field_topic: true
+  langcode: true
+  search_api_excerpt: true

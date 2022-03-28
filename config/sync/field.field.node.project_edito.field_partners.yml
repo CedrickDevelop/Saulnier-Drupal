@@ -1,0 +1,29 @@
+uuid: f906c02f-b878-48f6-a252-4dcfaa9abc77
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partners
+    - node.type.project_edito
+    - taxonomy.vocabulary.partners
+id: node.project_edito.field_partners
+field_name: field_partners
+entity_type: node
+bundle: project_edito
+label: Partenaires
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      partners: partners
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,51 @@
+uuid: 3c50454e-560b-48fc-95c9-9604eee07914
+langcode: fr
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.eb_project_edito_grid
+    - field.field.paragraph.see_more.field_bloc_description
+    - field.field.paragraph.see_more.field_riseup
+    - field.field.paragraph.see_more.field_title
+    - paragraphs.paragraphs_type.see_more
+  module:
+    - entity_browser
+id: paragraph.see_more.default
+targetEntityType: paragraph
+bundle: see_more
+mode: default
+content:
+  field_bloc_description:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_riseup:
+    type: entity_browser_entity_reference
+    weight: 2
+    region: content
+    settings:
+      entity_browser: eb_project_edito_grid
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings:
+        view_mode: teaser
+      selection_mode: selection_append
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

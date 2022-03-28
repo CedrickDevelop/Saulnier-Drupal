@@ -1,0 +1,20 @@
+uuid: 525d9cef-71e5-4ca6-8529-e4b1b11f9831
+langcode: fr
+status: true
+dependencies:
+  module:
+    - cp22_saulnier_partners
+  theme:
+    - cp22_saulnier_theme
+id: partnerslist
+theme: cp22_saulnier_theme
+region: footer
+weight: 0
+provider: null
+plugin: cp22_saulnier_partners_partnersList
+settings:
+  id: cp22_saulnier_partners_partnersList
+  label: 'Liste des partenaires'
+  label_display: visible
+  provider: cp22_saulnier_partners
+visibility: {  }

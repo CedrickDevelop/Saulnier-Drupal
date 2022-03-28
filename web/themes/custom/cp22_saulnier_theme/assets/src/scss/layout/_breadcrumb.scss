@@ -1,0 +1,56 @@
+#Breadcrumb {
+
+  position: relative;
+  display: inline-block;
+  top: 39.5rem;
+  z-index:5;
+  background-color: $color-breadcrumb-red;
+
+
+  @include mobile {
+    width: 90%;
+    height: 2rem;
+  }
+
+  nav {
+
+    ul {
+
+      padding: 0 7rem 0 3rem;
+      @extend %_flexCenter;
+      width: fit-content;
+
+      li {
+          height: 100%;
+          font-size: 1.4rem;
+          color: $color-white;
+
+          @include mobile {
+            display: none;
+          }
+
+        a {
+          padding: 1rem;
+          display: inline-block;
+        }
+
+      }
+
+      li::after {
+        content:"\f061";
+        @extend %_fontAwesomeBase;
+        color: $color-breadcrumb-dark-grey ;
+      }
+      li:last-of-type {
+        margin-left: 1rem;
+      }
+      li:last-of-type::after {
+        display: none;
+      }
+
+    }
+
+  }
+
+
+}

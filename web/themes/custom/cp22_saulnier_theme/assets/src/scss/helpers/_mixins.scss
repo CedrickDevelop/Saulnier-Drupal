@@ -1,0 +1,141 @@
+// RESPONSIVE
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+@mixin screenMaxWidth($width){
+  @media screen and (max-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin more-than($width) {
+  @media screen and (min-width: #{$width}) {
+    @content;
+  }
+}
+
+// RETINA
+@mixin retina {
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (                min-resolution: 120dpi) {
+    @content;
+  }
+}
+
+// ADD BORDER : default value with overiding possibilities.
+@mixin add-border(
+  $border-position: all,
+  $border-size: 1px,
+  $border-pattern: solid,
+  $border-color: $color-black) {
+
+  @if $border-position == all {
+    border: $border-size $border-pattern $border-color;
+  }
+  @else {
+    border-#{$border-position}: $border-size
+    $border-pattern $border-color;
+  }
+}
+
+// project specifics mixins :
+@mixin button-homepage-blue(
+  $min-width, $max-width, $margin-bottom) {
+    min-width:$min-width;
+    max-width: $max-width;
+    min-height: 5rem;
+
+    margin-bottom: $margin-bottom;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    border:2px solid $color-textBlue;
+    border-radius: 2.5rem;
+
+    padding:1.2rem 3.3rem 1.4rem 3.3rem;
+
+    @include screenMaxWidth($homepage-breakpoint-1650 ){
+      padding:1rem 2.15rem 1.5rem 2.05rem;
+    }
+      span {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        color: $color-textBlue;
+        width: 100%;
+
+        &::after {
+          content:"\f061";
+          @extend %_fontAwesomeBase;
+
+          margin-left: 1rem;
+          font-size: 2rem;
+
+          line-height: 2.5rem;
+          color: $color-text-red;
+
+        }
+      }
+
+    &:hover {
+      background-color: $color-textBlue;
+      color: $color-white;
+
+      span {
+        color:$color-white;
+
+        &::after {
+          transition-timing-function: ease-in-out;
+          transition: 0.5s;
+          transform: translateX(50%);
+        }
+      }
+
+
+    }
+
+
+}
+
+@mixin button-homepage-red(
+  $min-width, $max-width, $margin-bottom) {
+  min-width:$min-width;
+  max-width: $max-width;
+  min-height: 5rem;
+  margin-bottom: $margin-bottom;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border:2px solid $color-textBlue;
+  border-radius: 2.5rem;
+
+  //box-shadow: 0 0.3rem 0.6rem;
+
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: $color-white;
+
+  &::after {
+    content:"\f061";
+    @extend %_fontAwesomeBase;
+
+    margin-left: 1rem;
+    font-size: 2rem;
+
+    line-height: 2.5rem;
+    color: $color-white;
+
+  }
+
+}

@@ -1,0 +1,42 @@
+uuid: 9675912a-4472-4a9c-8a25-ce8fbbe29a4a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.eb_node_edito
+    - views.view.eb_node_edito_grid
+  module:
+    - views
+name: eb_project_edito_grid
+label: 'Page Projet-Éditoriale Grille'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Ajouter un article'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  52352466-201e-48e7-98d4-0a10d7516cf0:
+    id: view
+    uuid: 52352466-201e-48e7-98d4-0a10d7516cf0
+    label: 'Affichage Grille'
+    weight: 1
+    settings:
+      submit_text: Ajouter
+      auto_select: false
+      view: eb_node_edito_grid
+      view_display: entity_browser_1
+  40a47067-bd94-4896-a976-fe60b9504e05:
+    id: view
+    uuid: 40a47067-bd94-4896-a976-fe60b9504e05
+    label: 'Affichage Tableau'
+    weight: 2
+    settings:
+      submit_text: Ajouter
+      auto_select: false
+      view: eb_node_edito
+      view_display: entity_browser_1

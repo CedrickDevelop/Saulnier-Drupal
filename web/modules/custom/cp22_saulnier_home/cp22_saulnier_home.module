@@ -1,0 +1,54 @@
+<?php
+
+use Drupal\cp22_saulnier_home\Controller\FrontPageController;
+use Drupal\cp22_saulnier_home\Manager\HomeManager;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\adimeo_tools\Service\LanguageService;
+use Drupal\cp22_saulnier_news\Manager\NewsManager;
+use Drupal\cp22_saulnier_news_list\Manager\NewsListManager;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_metatag_route_entity().
+ *
+ * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
+ *
+ * @return mixed
+ */
+function cp22_saulnier_home_metatag_route_entity (RouteMatchInterface $route_match) {
+  $routeName = $route_match->getRouteName();
+  if ($routeName == FrontPageController::ROUTE_NAME) {
+    $homeManager = HomeManager::me();
+    $homeId = $homeManager->getFrontPageNodeId();
+    if (!empty($homeId)) {
+      $languageService = LanguageService::me();
+      $homeNode = $languageService->load('node', $homeId);
+      if (!empty($homeNode)) {
+        return $homeNode;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function cp22_saulnier_home_preprocess_node(&$variables) {
+  //  //////////////////////////////////////////////////////////////////////////
+  //  /// BUILD THE NEWS FOR HOMEPAGE
+  //  //////////////////////////////////////////////////////////////////////////
+  /** @var NodeInterface $node */
+  $nodes = $variables['node'];
+
+  // Integrer une condition si pour l'affichage sur la page homepage
+  // On charge les news sur la page : 0 to 4 nodes, promoted front page, sort desc, published.
+    $newsManager = \Drupal::service(NewsManager::class);
+    $variables['node_news']  = $newsManager->getPublishedNodes();
+
+    // Creation du bouton pour accéder à la page de newslist
+    $newsListManager = \Drupal::service(NewsListManager::class);
+    $variables['node_news_list_link'] = $newsListManager->getLinkButtonNewsList();
+
+
+}
+

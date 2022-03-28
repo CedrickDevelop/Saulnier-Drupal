@@ -1,0 +1,31 @@
+uuid: 9b4950b7-6382-4df5-aed6-62f9ee604dad
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_picture
+    - media.type.image
+    - media.type.remote_video
+    - node.type.project_edito
+id: node.project_edito.field_main_picture
+field_name: field_main_picture
+entity_type: node
+bundle: project_edito
+label: 'Image entête'
+description: "Image de présentation pour l'article.\r\nTaille conseillées 1920x375"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

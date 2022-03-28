@@ -1,0 +1,22 @@
+uuid: 9da8b3e2-f267-4b1f-81af-895fec55f46d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.news_list
+id: node.news_list.sticky
+field_name: sticky
+entity_type: node
+bundle: news_list
+label: 'Epinglé en haut des listes'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

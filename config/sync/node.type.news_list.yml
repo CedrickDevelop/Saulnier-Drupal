@@ -1,0 +1,17 @@
+uuid: 818ad6f6-de06-4dba-bd20-8b5637b0b942
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Page de liste des actualités'
+type: news_list
+description: 'Page de liste qui permettra de référencer les différentes actualités'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

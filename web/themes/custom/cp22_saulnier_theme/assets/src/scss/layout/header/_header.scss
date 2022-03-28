@@ -1,0 +1,95 @@
+@import "menuPrincipal";
+@import "hamburger";
+
+.Header {
+  height: 11rem;
+  max-width: 170rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+  position: relative;
+
+  @include tablet {
+    padding: 0 3.7rem 0 2.4rem;
+  }
+
+  @extend %_flexBetween;
+
+  &-logo {
+    max-width: 25rem;
+
+    img {
+      display: block;
+    }
+  }
+
+  &-networks {
+
+    @include tablet {
+      padding: 2rem;
+    }
+
+    & > div {
+      @extend %_flexBetween;
+
+      @include tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .TermSocials {
+        margin-left: 3rem;
+      }
+
+      a {
+        display: inline-block;
+        width: 1.8rem;
+        height: 1.8rem;
+
+
+
+        @include tablet {
+          margin-right: 3rem;
+
+        }
+
+        &:first-child{
+          margin-left: 0;
+        }
+
+        svg {
+          max-width: 100%;
+          max-height: 100%;
+          fill:$color-textBlue;
+
+        }
+      }
+    }
+  }
+
+  &-mobileMenu {
+    @extend %_displayNone;
+    position: absolute;
+    top: 100%;
+    background-color: $color-greyBackground;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 11rem);
+    z-index: 201;
+    overflow-y: auto;
+  }
+
+  @include tablet {
+    & > .Header-menuMain,
+    & > .Header-networks {
+      display: none;
+    }
+  }
+
+  &.js-mobile-menu-open{
+      .Header-menuMain {
+        display: block;
+      }
+  }
+}

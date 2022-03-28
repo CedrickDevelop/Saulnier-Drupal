@@ -1,0 +1,15 @@
+uuid: d88f17b6-935c-481d-89ea-e1a2cade9e69
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_see_more.png
+id: see_more
+label: 'Voir aussi'
+icon_uuid: null
+icon_default: null
+description: 'Cette zone permet d''ajouter jusque 2 liens en page d''accueil ou 4 liens sur toutes les autres parties du site'
+behavior_plugins: {  }

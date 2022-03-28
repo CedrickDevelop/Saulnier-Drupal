@@ -1,0 +1,6 @@
+name: cp22_saulnier_test_hook
+type: module
+core_version_requirement: ^8 || ^9
+package: Saulnier - Projet fil rouge Coding Pool 2022
+dependencies:
+  - bo_additions

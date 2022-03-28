@@ -1,0 +1,20 @@
+uuid: c9c68790-883a-4bcf-9be9-7eb23f9a00f4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.news_list
+  module:
+    - path
+id: node.news_list.path
+field_name: path
+entity_type: node
+bundle: news_list
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

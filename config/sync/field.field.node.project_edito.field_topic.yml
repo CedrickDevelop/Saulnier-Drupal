@@ -1,0 +1,29 @@
+uuid: 158fe63f-554e-4628-8f44-9ffce49f0553
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topic
+    - node.type.project_edito
+    - taxonomy.vocabulary.topics
+id: node.project_edito.field_topic
+field_name: field_topic
+entity_type: node
+bundle: project_edito
+label: Thématique
+description: 'Ce sont les thèmes principaux associés à ce contenu'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      topics: topics
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

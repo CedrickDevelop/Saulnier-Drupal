@@ -1,0 +1,80 @@
+uuid: 7763398f-797a-4a80-9399-6820b89dcc80
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.color_cover_xl
+    - image.style.cover_colorisee_l
+    - image.style.cover_colorisee_m
+    - image.style.cover_colorisee_s
+  theme:
+    - cp22_saulnier_theme
+id: cover_colorisee
+label: 'Cover colorisée'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - color_cover_xl
+        - cover_colorisee_l
+        - cover_colorisee_m
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 1.5x
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - color_cover_xl
+        - cover_colorisee_l
+        - cover_colorisee_m
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - color_cover_xl
+        - cover_colorisee_l
+        - cover_colorisee_m
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 2x
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - cover_colorisee_l
+        - cover_colorisee_m
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_colorisee_m
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_colorisee_m
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_colorisee_s
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_colorisee_s
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_colorisee_s
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 2x
+breakpoint_group: cp22_saulnier_theme
+fallback_image_style: cover_colorisee_l

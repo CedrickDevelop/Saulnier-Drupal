@@ -1,0 +1,15 @@
+uuid: faa3adcd-8b03-4d5d-9dc9-198116424367
+langcode: fr
+status: true
+dependencies: {  }
+name: paragraph_media_video
+label: 'Paragraphe Média Video (1115x627)'
+effects:
+  b0b37696-53f1-4647-b375-6f8bc94ee07d:
+    uuid: b0b37696-53f1-4647-b375-6f8bc94ee07d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1115
+      height: 627
+      anchor: center-center

@@ -1,0 +1,25 @@
+uuid: 1d495db1-2740-49ba-92a3-636bc6833e97
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - cp22_saulnier_theme
+id: footer_menu
+theme: cp22_saulnier_theme
+region: footer
+weight: -1
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Pied de page'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

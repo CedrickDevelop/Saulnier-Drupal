@@ -1,0 +1,9 @@
+uuid: 9bf98fcc-def5-4080-87fb-819c71c72ffe
+langcode: fr
+status: true
+dependencies: {  }
+id: search_api__views_block__global_search__block_1
+name: 'search_api:views_block__global_search__block_1'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

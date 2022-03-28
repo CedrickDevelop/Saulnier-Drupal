@@ -1,0 +1,15 @@
+uuid: d12ff296-31d2-4615-855f-7ffe05f59612
+langcode: fr
+status: true
+dependencies: {  }
+name: cover_colorisee_s
+label: 'Cover colorisée (414w)'
+effects:
+  d98e2690-5ab7-440f-80b2-ce0672b85b32:
+    uuid: d98e2690-5ab7-440f-80b2-ce0672b85b32
+    id: image_scale
+    weight: 1
+    data:
+      width: 414
+      height: null
+      upscale: true

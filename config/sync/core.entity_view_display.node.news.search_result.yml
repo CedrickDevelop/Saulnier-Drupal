@@ -1,0 +1,45 @@
+uuid: 0313e665-6c8d-4978-b6ae-671d2c1ef2a9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.news.field_chapo
+    - field.field.node.news.field_content
+    - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_theme
+    - field.field.node.news.field_visual
+    - node.type.news
+  module:
+    - user
+id: node.news.search_result
+targetEntityType: node
+bundle: news
+mode: search_result
+content:
+  field_chapo:
+    type: basic_string
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_theme:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_content: true
+  field_meta_tags: true
+  field_visual: true
+  langcode: true
+  links: true

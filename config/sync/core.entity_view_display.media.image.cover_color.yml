@@ -1,0 +1,33 @@
+uuid: 89f88ebb-a7da-40d7-89df-6d72f95d0cb5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.cover_color
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.cover_colorisee
+  module:
+    - responsive_image
+_core:
+  default_config_hash: EP_ezL35cTO1NM5uCPjelHXGLBrIGEwILURP3w-m2FM
+id: media.image.cover_color
+targetEntityType: media
+bundle: image
+mode: cover_color
+content:
+  field_media_image:
+    type: responsive_image
+    label: visually_hidden
+    settings:
+      responsive_image_style: cover_colorisee
+      image_link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

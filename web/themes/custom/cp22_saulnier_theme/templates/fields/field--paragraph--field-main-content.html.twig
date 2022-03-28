@@ -1,0 +1,14 @@
+<div class="CkeditorContent">
+
+  {% if multiple %}
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+  {% else %}
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+  {% endif %}
+
+</div>
+

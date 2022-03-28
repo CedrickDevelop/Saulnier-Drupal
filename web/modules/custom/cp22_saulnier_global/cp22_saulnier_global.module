@@ -1,0 +1,26 @@
+<?php
+
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cp22_saulnier_global_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dillon module.
+    case 'help.page.cp22_saulnier_global':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+/**
+ * Ce hook se déclenche lorsque l'utilisateur se connecte
+ * Dès qu'un utilisateur se connecte il verra son nom s'afficher
+ */
+function hook_user_login(UserInterface $account) {
+  Drupal::messenger()->addMessage('Hello'. $account->getAccountName());
+}

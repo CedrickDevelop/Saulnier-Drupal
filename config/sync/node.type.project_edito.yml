@@ -1,0 +1,17 @@
+uuid: 8428e3e7-da62-4413-8a6d-be32a127e517
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Page Projet-Éditoriale'
+type: project_edito
+description: 'Cette page est utilisée pour la concertation globale, les projets et les pages éditoriales.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

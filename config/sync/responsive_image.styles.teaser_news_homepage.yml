@@ -1,0 +1,21 @@
+uuid: 19339669-0977-4e8d-9acd-208571679f64
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.teaser_news_homepage
+    - image.style.teaser_news_homepage_x2
+id: teaser_news_homepage
+label: 'Teaser News Homepage'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(min-width:450px)140px,120px'
+      sizes_image_styles:
+        - teaser_news_homepage
+        - teaser_news_homepage_x2
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: teaser_news_homepage

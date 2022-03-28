@@ -1,0 +1,18 @@
+uuid: 8cf66fb3-64d4-4932-b370-e4c20b1a759b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.project_edito
+id: node.project_edito.title
+field_name: title
+entity_type: node
+bundle: project_edito
+label: Titre
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

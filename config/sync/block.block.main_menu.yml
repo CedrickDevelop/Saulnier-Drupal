@@ -1,0 +1,25 @@
+uuid: e3a88c79-1cae-46a9-8ff5-cdc2ea65629e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - cp22_saulnier_theme
+id: main_menu
+theme: cp22_saulnier_theme
+region: header
+weight: -2
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Menu principal'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 2c0e8077-caa0-4db4-a0bd-f285158daaae
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.topics
+  module:
+    - path
+id: taxonomy_term.topics.path
+field_name: path
+entity_type: taxonomy_term
+bundle: topics
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

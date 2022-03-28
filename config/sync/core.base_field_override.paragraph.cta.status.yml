@@ -1,0 +1,22 @@
+uuid: 9adae3d4-f77e-4a51-a769-fd5dfe82b9b2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cta
+id: paragraph.cta.status
+field_name: status
+entity_type: paragraph
+bundle: cta
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

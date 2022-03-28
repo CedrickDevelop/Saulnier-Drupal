@@ -1,0 +1,15 @@
+services:
+  #Manager
+  Drupal\cp22_saulnier_taxonomy\Manager\NodesByTaxonomyManager:
+    class: Drupal\cp22_saulnier_taxonomy\Manager\NodesByTaxonomyManager
+    arguments: ['@entity_type.manager','@Drupal\cp22_saulnier_taxonomy\Gateway\NodesByTaxonomyGateway' ]
+
+  #Gateway
+  Drupal\cp22_saulnier_taxonomy\Gateway\NodesByTaxonomyGateway:
+    class: Drupal\cp22_saulnier_taxonomy\Gateway\NodesByTaxonomyGateway
+    arguments: ['@entity_type.manager']
+#
+#  #Controller
+#  Drupal\cp22_saulnier_taxonomy\Controller\NodesByTaxonomyController:
+#    class: Drupal\cp22_saulnier_taxonomy\Controller\NodesByTaxonomyController
+#    arguments: ['@Drupal\cp22_saulnier_taxonomy\Manager\NodesByTaxonomyManager','@title_resolver']

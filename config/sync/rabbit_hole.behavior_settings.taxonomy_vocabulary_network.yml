@@ -1,0 +1,14 @@
+uuid: 760241d9-f1d8-4d43-a1d7-b19bc9e4ffe8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.network
+id: taxonomy_vocabulary_network
+entity_type_id: taxonomy_vocabulary
+entity_id: network
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

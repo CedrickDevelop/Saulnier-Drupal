@@ -1,0 +1,14 @@
+uuid: 5310fdac-486b-4712-a50c-e545a0146315
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.project_edito
+id: node_type_project_edito
+entity_type_id: node_type
+entity_id: project_edito
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

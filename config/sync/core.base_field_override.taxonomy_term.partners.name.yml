@@ -1,0 +1,18 @@
+uuid: 76df2d70-a5f2-45aa-887e-add546c89bc3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.partners
+id: taxonomy_term.partners.name
+field_name: name
+entity_type: taxonomy_term
+bundle: partners
+label: Nom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

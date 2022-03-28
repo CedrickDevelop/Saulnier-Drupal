@@ -1,0 +1,139 @@
+<?php
+
+use Drupal\cp22_saulnier_edito\Manager\EditoManager;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function cp22_saulnier_edito_preprocess_node(&$variables)
+{
+//  //////////////////////////////////////////////////////////////////////////
+//  /// BUILD THE EDITO PROJECT NODE TO THE TWIG
+//  //////////////////////////////////////////////////////////////////////////
+  /** @var NodeInterface $node */
+  $nodes = $variables['node'];
+
+    if($nodes->bundle() === 'list_edito') {
+
+      $editoManager = Drupal::service(EditoManager::class);
+
+      $variables['list_edito'] = $editoManager->getAllNodesBuilt();
+
+    }
+
+
+}
+//  //////////////////////////////////////////////////////////////////////////
+//  /// RECHERCHE DU TYPE DE NODE FAIT AVEC ADAM
+//  //////////////////////////////////////////////////////////////////////////
+//  // On type la variable pour avoir l'autocompletion
+//  /** @var NodeInterface $node */
+//  $node = $variables['node'];
+//
+//  if($node->bundle() == NewsManager::NEWS_LIST_BUNDLE){
+//
+//    $newsManager = \Drupal::service(NewsManager::class);
+//
+//    // On recupere dans le newsManager pour le construire le tableau de rendu à envoyer dans la page de vue.
+//    $variables[NewsManager::NEWS_LIST_PREPROCESS_KEY] = $newsManager->getBuiltNewsNodeForNewsListPage();
+//  }
+
+
+
+  /////////////////////////////////////////////////////////////////////////
+  ///  CORRECTION 2 AVEC JEAN PASCAL
+  //////////////////////////////////////////////////////////////////////////
+//  /** @var \Drupal\cp22_saulnier_news\Manager\NewsManager $newsListService */
+//  $newsManager = \Drupal::service(\Drupal\cp22_saulnier_news\Manager\NewsManager::class);
+//  $variables = $newsManager->addNewsListToNodePreprocessVariableIfNeeded($variables);
+
+
+  //////////////////////////////////////////////////////////////////////////
+  /// ON CREE UNE INSTANCE DU SERVICE POUR L'APPELLER
+  /// DANS LE SERVICE ON VA AINSI INSERER LA LOGIQUE DU HOOK PUIS RECHARGER LES INFORMATIONS VERS LA VUE TWIG
+  //////////////////////////////////////////////////////////////////////////
+
+  // On appelle le service qui fera le travail de preparation du node avant de l'envoyer à la twig
+//  /** @var \Drupal\cp22_saulnier_news\NewsListService $newsListService */
+//  $newsListService = Drupal::service(\Drupal\cp22_saulnier_news\NewsListService::class);
+//  $newsListe = $newsListService->addNewsListToNodePreprocessVariableIfNeeded($variables);
+//
+//  // On renvoi à la vue les informations
+//  // Entre les crochets le nom de la variable à récupérer dans la vue
+//  $variables['newsListe'] = $newsListe;
+
+
+  ///     /////////////////////////////////////////////////////////////////////////
+  ///  CORRECTION
+  //////////////////////////////////////////////////////////////////////////
+
+  // On appelle le service qui fera le travail de preparation du node avant de l'envoyer à la twig
+//  /** @var \Drupal\cp22_saulnier_news\NewsListService $newsListService */
+//  $newsListService = Drupal::service(\Drupal\cp22_saulnier_news\NewsListService::class);
+//  $variables = $newsListService->addNewsListToNodePreprocessVariableIfNeeded($variables);
+
+  //////////////////////////////////////////////////////////////////////////
+  /// ON DEPLACE TOUTE LA LOGIQUE DU NODE VERS LE SERVICE.
+  /// Dans la suite il y a le code du module que l'on a adapté au service.
+  //////////////////////////////////////////////////////////////////////////
+
+//
+//  /** @var \Drupal\node\NodeInterface $node */
+//  // Recuperation du node à partir des variables
+//  $node = $variables['node'];
+//
+//  // Verificatiopn du type de node en utilisant une inversion
+//  // Si le node ne fait pas partie de .... alors on continu dans le code
+//  if ($node->bundle() !== 'news_list'){
+//    return;
+//  }
+//
+//  // Instanciation des entités
+//  /** @var \Drupal\core\Entity\EntityTypeManagerInterface $etm */
+//  // Appel de l'entitytypemanager
+//  $etm = Drupal::entityTypeManager();
+//  $nodeStorage = $etm->getStorage('node');
+//
+//  // On accède au storage du node
+//  $query = $nodeStorage->getQuery();
+//
+//  // Pour afficher les nodes publiés on utilise le status publiés
+//  $query->condition('status', \Drupal\node\NodeInterface::PUBLISHED);
+//
+//  // On choisit la condition du type de node à recuperer
+//  $query->condition('type', 'news');
+//
+//  // On execute la requete pour recuperer les informations, on recuperer une liste d'ids'
+//  $newsIdListe = $query->execute();
+//
+//  // On charge les nodes en fonction de l'id que l'on a recherché précédemment
+//  $newsListe = $nodeStorage->loadMultiple($newsIdListe);
+//
+//  // On va iterer sur le retour du loadmultiple pour aller chercher une information précise
+//  // Ici en l'ocurrence on recupere le titre
+////  /** @var NodeInterface $news */
+////  foreach ($newsListe as $news){
+////    var_dump($news->getTitle());
+////  }
+//
+//  // Une fois la variable definit elle est transmise directement au template
+//  //  voir le template node--news-list
+//  // La variable qui part vers le template c'est ce qui est entre crochets
+//  $variables['newsListe'] = $newsListe;
+
+//  $data = [
+//    'Thématique Test 1',
+//    'Thématique Test 2',
+//    'Thématique Test 3',
+//    'Thématique Test 4',
+//    'Thématique Test 5',
+//  ];
+//
+//  $queue = \Drupal::queue('cp22_saulnier_news_queueworker');
+//  $queue->createQueue();
+//  foreach($data as $theme) {
+//    $queue->createItem($theme);
+//  }
+
+//}

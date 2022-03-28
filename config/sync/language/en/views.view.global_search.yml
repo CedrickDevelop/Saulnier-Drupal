@@ -1,0 +1,13 @@
+label: 'global search'
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_label: items
+            items_per_page_options_all_label: '- All -'
+      filters:
+        search_api_language:
+          expose:
+            label: Languages

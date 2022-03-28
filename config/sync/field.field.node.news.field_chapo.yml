@@ -1,0 +1,19 @@
+uuid: 645f0bcd-cbfd-4d5d-a67a-17e163eb1518
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chapo
+    - node.type.news
+id: node.news.field_chapo
+field_name: field_chapo
+entity_type: node
+bundle: news
+label: Chapô
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,20 @@
+uuid: 94fea106-3a16-4616-a232-157cbac13809
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.home
+id: node.home.uid
+field_name: uid
+entity_type: node
+bundle: home
+label: 'Écrit par'
+description: 'Le nom d''utilisateur de l''auteur du contenu.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

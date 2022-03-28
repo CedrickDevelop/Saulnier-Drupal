@@ -1,0 +1,22 @@
+uuid: 6c312a97-ba9f-4467-8a55-a37125e376c7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.topics
+id: taxonomy_term.topics.status
+field_name: status
+entity_type: taxonomy_term
+bundle: topics
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

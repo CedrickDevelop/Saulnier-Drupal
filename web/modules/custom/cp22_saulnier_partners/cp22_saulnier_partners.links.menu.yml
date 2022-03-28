@@ -1,0 +1,22 @@
+#### Page taxonomie -- partners
+cp22_saulnier_partners.partners:
+  title: "Partenaires"
+  parent: cp22_saulnier_global.taxonomie
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/partners/overview
+  weight: 1
+
+cp22_saulnier_partners.partners.add:
+  title: "Ajouter un partenaire"
+  parent: cp22_saulnier_partners.partners
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/topics/add
+  weight: 0
+
+cp22_saulnier_partners.partners.show:
+  title: "Voir la liste des Partenaires"
+  parent: cp22_saulnier_partners.partners
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/partners/overview
+  weight: 1
+

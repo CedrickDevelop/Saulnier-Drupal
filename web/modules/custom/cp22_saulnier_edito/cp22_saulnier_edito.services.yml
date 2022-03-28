@@ -1,0 +1,14 @@
+services:
+  Drupal\cp22_saulnier_edito\Manager\EditoManager:
+    class: Drupal\cp22_saulnier_edito\Manager\EditoManager
+    arguments: ['@entity_type.manager',
+                '@Drupal\cp22_saulnier_global\Manager\BasicListOfNodesManager']
+
+  Drupal\cp22_saulnier_edito\Breadcrumb\EditoBreadcrumbBuilder:
+    class: Drupal\cp22_saulnier_edito\Breadcrumb\EditoBreadcrumbBuilder
+    arguments: [ '@language_manager',
+                 '@request_stack',
+                 '@title_resolver',
+                 '@Drupal\cp22_saulnier_edito\Manager\EditoManager' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 1012 }

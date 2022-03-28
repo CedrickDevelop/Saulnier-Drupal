@@ -1,0 +1,29 @@
+uuid: 0ef5b77d-0c6c-48f2-8c6f-24bdc986c044
+langcode: fr
+status: true
+dependencies:
+  config:
+    - facets.facet.themes
+  module:
+    - facets
+    - system
+  theme:
+    - cp22_saulnier_theme
+id: facet_theme
+theme: cp22_saulnier_theme
+region: content
+weight: 0
+provider: null
+plugin: 'facet_block:themes'
+settings:
+  id: 'facet_block:themes'
+  label: 'Facette thématiques'
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: facet_theme
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/search\r\n/recherche-site"

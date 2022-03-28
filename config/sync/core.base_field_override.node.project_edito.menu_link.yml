@@ -1,0 +1,20 @@
+uuid: 8b0d850d-f43d-4c0b-8d0c-5641e24d369a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.project_edito
+id: node.project_edito.menu_link
+field_name: menu_link
+entity_type: node
+bundle: project_edito
+label: 'Lien du menu'
+description: 'Lien de menu calculé pour le nœud (disponible uniquement pendant l''enregistrement du nœud).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

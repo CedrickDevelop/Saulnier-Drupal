@@ -1,0 +1,22 @@
+uuid: 4f025a31-0c0b-46a9-905d-45c5902861d7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.project_edito
+id: node.project_edito.promote
+field_name: promote
+entity_type: node
+bundle: project_edito
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

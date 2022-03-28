@@ -1,0 +1,8 @@
+{% include '@cp22_saulnier_theme/content/node/custom--search-result.html.twig' with {
+  'label' : node.label,
+  'themes' : content.field_topic,
+  'chapo' : content.field_intro_text,
+  'excerpt' : content.search_api_excerpt,
+  'url' : url
+} %}
+

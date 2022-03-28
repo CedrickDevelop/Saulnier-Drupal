@@ -1,0 +1,60 @@
+uuid: 4dc167bc-e052-40f4-89ca-671819954586
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.paragraph_media
+    - image.style.paragraph_media_x2
+    - image.style.paragraphe_media_mobile
+  theme:
+    - cp22_saulnier_theme
+id: paragraph_media
+label: 'Paragraphe Média'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_x2
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_x2
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_x2
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_x2
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraphe_media_mobile
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraphe_media_mobile
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraphe_media_mobile
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 2x
+breakpoint_group: cp22_saulnier_theme
+fallback_image_style: paragraph_media

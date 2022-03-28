@@ -1,0 +1,18 @@
+uuid: 42f6706e-5d31-4876-b47a-7fa91b8567e4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cta
+id: paragraph.cta.created
+field_name: created
+entity_type: paragraph
+bundle: cta
+label: 'Écrit le'
+description: 'Heure de création du paragraphe.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

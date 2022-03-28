@@ -1,0 +1,18 @@
+uuid: d3367540-28bc-45da-b836-dee8a09afee7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.network
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.network
+target_entity_type_id: taxonomy_term
+target_bundle: network
+default_langcode: site_default
+language_alterable: false

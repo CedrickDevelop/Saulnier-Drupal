@@ -1,0 +1,18 @@
+uuid: f7626fa2-dc6e-45b1-af5b-31910852725d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.media
+id: paragraph.media.created
+field_name: created
+entity_type: paragraph
+bundle: media
+label: 'Écrit le'
+description: 'Heure de création du paragraphe.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

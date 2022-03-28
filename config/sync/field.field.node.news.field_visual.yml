@@ -1,0 +1,29 @@
+uuid: 94e9567b-4880-4962-b724-dd7c8db2943f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visual
+    - media.type.image
+    - node.type.news
+id: node.news.field_visual
+field_name: field_visual
+entity_type: node
+bundle: news
+label: Visuel
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

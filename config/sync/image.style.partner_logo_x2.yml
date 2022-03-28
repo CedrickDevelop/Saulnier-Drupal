@@ -1,0 +1,15 @@
+uuid: f52eb2bb-4875-4d86-8752-3701f09c48cf
+langcode: fr
+status: true
+dependencies: {  }
+name: partner_logo_x2
+label: 'Logo partenaire (max 600 x max 244)'
+effects:
+  b6c75079-2169-4732-aa96-70856a735ba2:
+    uuid: b6c75079-2169-4732-aa96-70856a735ba2
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: 244
+      upscale: false

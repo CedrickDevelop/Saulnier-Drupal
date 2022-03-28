@@ -1,0 +1,18 @@
+uuid: d988c9d7-02e7-4b0c-a3d2-093982b1a30c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.project_edito
+id: node.project_edito.metatag
+field_name: metatag
+entity_type: node
+bundle: project_edito
+label: 'Metatags (Hidden field for JSON support)'
+description: 'Les balises méta de l''entité.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

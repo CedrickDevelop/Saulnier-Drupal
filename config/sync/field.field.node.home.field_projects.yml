@@ -1,0 +1,40 @@
+uuid: 49cd4e56-e322-46b2-9816-1d7b4d726d52
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_projects
+    - node.type.home
+    - paragraphs.paragraphs_type.see_more
+  module:
+    - entity_reference_revisions
+id: node.home.field_projects
+field_name: field_projects
+entity_type: node
+bundle: home
+label: 'Nos Projets'
+description: '2 éléments maximum seront présents sur la page d''accueil'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      see_more: see_more
+    negate: 0
+    target_bundles_drag_drop:
+      cta:
+        weight: 5
+        enabled: false
+      media:
+        weight: 6
+        enabled: false
+      see_more:
+        weight: 7
+        enabled: true
+      wysiwyg:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

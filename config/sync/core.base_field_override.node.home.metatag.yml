@@ -1,0 +1,18 @@
+uuid: 607392c7-56fd-4de3-b7df-84b4bb856258
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.home
+id: node.home.metatag
+field_name: metatag
+entity_type: node
+bundle: home
+label: 'Metatags (Hidden field for JSON support)'
+description: 'Les balises méta de l''entité.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

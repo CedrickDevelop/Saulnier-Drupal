@@ -1,0 +1,7 @@
+#cp22_saulnier_taxonomy.content:
+#  path: '/thematiques'
+#  defaults:
+#    _controller: Drupal\cp22_saulnier_taxonomy\Controller\NodesByTaxonomyController:content
+#    _title: 'Les articles selon la thématique'
+#  requirements:
+#    _permission: 'access content'

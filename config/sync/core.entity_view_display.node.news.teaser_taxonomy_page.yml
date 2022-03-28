@@ -1,0 +1,42 @@
+uuid: dc6d6a34-aade-4d36-b493-b8c7b638b7f1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_taxonomy_page
+    - field.field.node.news.field_chapo
+    - field.field.node.news.field_content
+    - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_theme
+    - field.field.node.news.field_visual
+    - node.type.news
+  module:
+    - user
+id: node.news.teaser_taxonomy_page
+targetEntityType: node
+bundle: news
+mode: teaser_taxonomy_page
+content:
+  field_chapo:
+    type: basic_string
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_visual:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: teaser_news_homepage
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_content: true
+  field_meta_tags: true
+  field_theme: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

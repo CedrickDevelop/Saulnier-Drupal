@@ -1,0 +1,15 @@
+uuid: dbd02ef8-ded9-426b-9d97-52508c57374f
+langcode: fr
+status: true
+dependencies: {  }
+name: cover_colorisee_l
+label: 'Cover colorisée(1366w)'
+effects:
+  687dac39-ea6d-4a81-a36d-dadf729226b7:
+    uuid: 687dac39-ea6d-4a81-a36d-dadf729226b7
+    id: image_scale
+    weight: 1
+    data:
+      width: 1366
+      height: null
+      upscale: true

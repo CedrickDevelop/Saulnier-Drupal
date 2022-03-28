@@ -1,0 +1,46 @@
+uuid: 54bd20bf-b0fa-41ab-8c26-e6eea7dc5f21
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.news
+    - paragraphs.paragraphs_type.cta
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.see_more
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.news.field_content
+field_name: field_content
+entity_type: node
+bundle: news
+label: Contenu
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cta: cta
+      media: media
+      see_more: see_more
+      wysiwyg: wysiwyg
+    negate: 0
+    target_bundles_drag_drop:
+      cta:
+        weight: 5
+        enabled: true
+      media:
+        weight: 6
+        enabled: true
+      see_more:
+        weight: 7
+        enabled: true
+      wysiwyg:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,46 @@
+<header id="Header" class="Header">
+
+{#  Version Desktop#}
+  <div class="Header-logo">
+{#    {% set path = path('<current>')|split('/') %}#}
+{#    {% if path[1]=='en' %}#}
+{#    <a href="/en/front" title="{{ "Retour à la page d'accueil"|t }}">#}
+{#      <img src="{{ logo_url }}" alt="{{ "logo du projet olympique"|t }} ">#}
+{#    </a>#}
+{#    {% elseif path[1]=='fr' %}#}
+{#    <a href="/fr/front" title="{{ "Retour à la page d'accueil"|t }}">#}
+{#      <img src="{{ logo_url }}" alt="{{ "logo du projet olympique"|t }} ">#}
+{#    </a>#}
+{#    {% endif %}#}
+
+        <a href="{{ front_page }}" title="{{ "Retour à la page d'accueil"|t }}">
+          <img src="{{ logo_url }}" alt="{{ "logo du projet olympique"|t }} ">
+        </a>
+  </div>
+
+  <div class="Header-menuMain">
+    {{ header.main_menu }}
+  </div>
+
+  <div class="Header-networks ">
+    {{ header.socialslist }}
+    {{ header.search_input }}
+  </div>
+
+{#  Version Mobile et tablette#}
+  <div class="Header-hamburger">
+    <i class="far fa-bars"></i>
+    <i class="far fa-times"></i>
+  </div>
+
+  <div class="Header-mobileMenu">
+    <div class="Header-menuMain">
+      {{ header.main_menu }}
+    </div>
+
+    <div class="Header-networks">
+      {{ header.socialslist }}
+    </div>
+  </div>
+
+</header>

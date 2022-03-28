@@ -1,0 +1,12 @@
+services:
+  cp22_saulnier_partners.partners_manager:
+    class: Drupal\cp22_saulnier_partners\Manager\PartnersTermsManager
+    arguments: ['@entity_type.manager',
+                '@Drupal\cp22_saulnier_global\Gateway\BasicListOfTaxonomyTermsGateway']
+
+  #Partners Controller
+  Drupal\cp22_saulnier_partners\Controller\PartnersController:
+    class: Drupal\cp22_saulnier_partners\Controller\PartnersController
+    arguments: ['@cp22_saulnier_partners.partners_manager',
+                '@adimeo_tools.language','@title_resolver']
+

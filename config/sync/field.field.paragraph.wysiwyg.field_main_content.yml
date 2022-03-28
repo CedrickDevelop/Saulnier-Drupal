@@ -1,0 +1,21 @@
+uuid: 92eca2f5-d9f5-4e7d-adbf-48608e71d86c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_content
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - text
+id: paragraph.wysiwyg.field_main_content
+field_name: field_main_content
+entity_type: paragraph
+bundle: wysiwyg
+label: 'Contenu principal'
+description: 'Écrivez ici toutes vos informations de contenu'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

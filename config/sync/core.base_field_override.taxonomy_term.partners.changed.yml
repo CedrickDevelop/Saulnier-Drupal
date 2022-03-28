@@ -1,0 +1,18 @@
+uuid: 3da019a4-5a21-48ab-84b0-6ed5241fa32b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.partners
+id: taxonomy_term.partners.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: partners
+label: Modifié
+description: 'Le moment auquel le terme a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

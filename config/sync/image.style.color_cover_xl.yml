@@ -1,0 +1,15 @@
+uuid: d4ee9bf8-2579-4fa5-b34c-f75b02ffa3f1
+langcode: fr
+status: true
+dependencies: {  }
+name: color_cover_xl
+label: 'Cover colorisée(1920w)'
+effects:
+  1f8eb0b2-e378-417b-9560-6b56d8c6a3b5:
+    uuid: 1f8eb0b2-e378-417b-9560-6b56d8c6a3b5
+    id: image_scale
+    weight: 1
+    data:
+      width: 1920
+      height: null
+      upscale: true

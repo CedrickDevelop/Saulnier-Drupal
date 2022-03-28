@@ -1,0 +1,18 @@
+uuid: eb9f3ad5-267a-4f62-afb3-a153f5ac133e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.network
+id: taxonomy_term.network.name
+field_name: name
+entity_type: taxonomy_term
+bundle: network
+label: Nom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: eed524e6-eec3-4ae9-91ef-2f9b70943bbc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.partners
+id: taxonomy_term.partners.status
+field_name: status
+entity_type: taxonomy_term
+bundle: partners
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

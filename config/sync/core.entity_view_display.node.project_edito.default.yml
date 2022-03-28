@@ -1,0 +1,64 @@
+uuid: fdaf8f18-92fa-4160-ade5-e15781958d08
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.project_edito.field_intro_text
+    - field.field.node.project_edito.field_main_picture
+    - field.field.node.project_edito.field_paragraphs
+    - field.field.node.project_edito.field_partners
+    - field.field.node.project_edito.field_topic
+    - node.type.project_edito
+  module:
+    - entity_reference_revisions
+    - user
+id: node.project_edito.default
+targetEntityType: node
+bundle: project_edito
+mode: default
+content:
+  field_intro_text:
+    type: basic_string
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_main_picture:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_partners:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_topic:
+    type: entity_reference_label
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

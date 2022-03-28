@@ -1,0 +1,61 @@
+
+
+.Footer {
+
+  &-partners {
+
+    background-color: $color-menu-blue-light;
+    padding: 3rem 0 3rem;
+
+    h2 {
+      color: $color-textBlue;
+      @extend %_fontBodyBold;
+      @extend %_fontBodyBoldMenuFooter;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+      padding-left: 2rem;
+    }
+  }
+
+  &-menu {
+    background-color: $color-textBlue;
+    color: $color-white;
+
+     ul {
+       display: flex;
+       justify-content: flex-end;
+       align-items: center;
+       padding: 2rem;
+
+       @include mobile {
+         display: block;
+       }
+
+       li {
+         margin-left: 6rem;
+
+         @include mobile {
+           margin: 0 0 3rem;
+           text-align: center;
+         }
+       }
+       li:last-of-type {
+         @include mobile {
+           margin: 0;
+         }
+       }
+     }
+  }
+
+}
+.swiper {
+  &-slide{
+    text-align: center;
+  }
+
+  &-wrapper {
+
+  }
+}
+
+

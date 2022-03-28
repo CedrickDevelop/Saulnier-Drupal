@@ -1,0 +1,22 @@
+uuid: 982bce01-1b90-468b-965e-b7c53857946a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node_title
+label: 'Juste le titre'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  53999911-6195-4f91-b6d2-5f2e1163b888:
+    id: node_type
+    negate: false
+    uuid: 53999911-6195-4f91-b6d2-5f2e1163b888
+    context_mapping:
+      node: node
+    bundles:
+      news_list: news_list
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,5 @@
+name: Themes
+url_alias: Themes
+widget:
+  config:
+    reset_text: 'Display all'

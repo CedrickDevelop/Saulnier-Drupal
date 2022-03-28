@@ -1,0 +1,17 @@
+uuid: 4ff5221f-83b0-4b51-a664-ddcca126a6a6
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Page d''une actualité'
+type: news
+description: 'Les actualités du site'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

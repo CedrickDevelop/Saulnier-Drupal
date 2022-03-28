@@ -1,0 +1,19 @@
+uuid: 284e83a3-6ccd-4a98-b51b-bf0f947b3480
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_text
+    - node.type.project_edito
+id: node.project_edito.field_intro_text
+field_name: field_intro_text
+entity_type: node
+bundle: project_edito
+label: Chapô
+description: 'Cette zone présente un texte descriptif de la page.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

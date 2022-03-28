@@ -1,0 +1,10 @@
+uuid: 6b8472da-8b2d-444e-a738-04aaa08ed22a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.eb_teaser
+label: 'Accroche Entity Browser'
+targetEntityType: node
+cache: true

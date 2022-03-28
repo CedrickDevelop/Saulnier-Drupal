@@ -1,0 +1,15 @@
+uuid: 9c18ef09-67a5-499a-b1f2-ce1b89ee018c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_media.png
+id: media
+label: 'Paragraph Média'
+icon_uuid: null
+icon_default: null
+description: 'Contenu média avec un bouton pour ouvrir les videos youtube'
+behavior_plugins: {  }

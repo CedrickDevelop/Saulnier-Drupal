@@ -1,0 +1,28 @@
+.Header-hamburger {
+
+
+  @extend %_displayNone;
+
+  font-size: 3rem;
+  color: $color-textBlue;
+  cursor: pointer;
+
+  .fa-times {
+    @extend %_displayNone;
+    color:$color-text-red;
+  }
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.js-mobile-menu-open {
+  .fa-bars {
+    @extend %_displayNone;
+  }
+
+  .fa-times {
+    display: block;
+  }
+}

@@ -1,0 +1,27 @@
+<?php
+
+use Drupal\cp22_saulnier_taxonomy\Manager\NodesByTaxonomyManager;
+
+
+function cp22_saulnier_taxonomy_preprocess_taxonomy_term(&$variables) {
+  /** @var \Drupal\taxonomy\TermInterface $term */
+  $term = $variables['term'];
+  $view_mode = $variables['view_mode'];
+  $vid = $term->bundle();
+
+
+  $managerNodesByTaxo = \Drupal::service(NodesByTaxonomyManager::class);
+
+  if ($vid == $managerNodesByTaxo::TERM_BUNDLE && $view_mode === "full") {
+    $termid = $term->id();
+
+    // Send the nodes to the view
+    /** @var \Drupal\node\NodeInterface $node */
+    $variables['news_by_taxoTerm'] = $managerNodesByTaxo->getNodesNewsByTaxonomyOrderByLastChanged($termid);
+  }
+
+}
+
+
+
+

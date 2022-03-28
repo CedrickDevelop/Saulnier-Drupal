@@ -1,0 +1,22 @@
+uuid: 70511632-744c-4738-8278-454f94002568
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.network
+id: taxonomy_term.network.status
+field_name: status
+entity_type: taxonomy_term
+bundle: network
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

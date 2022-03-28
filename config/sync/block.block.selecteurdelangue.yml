@@ -1,0 +1,28 @@
+uuid: cf3b2a26-8111-4194-bbe9-342ed29b09ce
+langcode: fr
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - cp22_saulnier_theme
+id: selecteurdelangue
+theme: cp22_saulnier_theme
+region: content
+weight: -2
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Sélecteur de langue'
+  label_display: '0'
+  provider: language
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      fr: fr
+      en: en

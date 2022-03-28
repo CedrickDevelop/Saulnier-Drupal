@@ -1,0 +1,18 @@
+.NodeSearchResult {
+  &-title {
+    font-weight: bold;
+    margin: 2rem;
+    color: $color-textBlue;
+  }
+
+  &-theme {
+    display: inline-block;
+    background-color: $color-text-blue-very-light;
+  }
+
+  &-search {
+    margin:1rem;
+    background-color: $color-text-grey-light;
+    display: inline-block;
+  }
+}

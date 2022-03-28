@@ -1,0 +1,5 @@
+services:
+  Drupal\cp22_saulnier_news_list\Manager\NewsListManager:
+    class: Drupal\cp22_saulnier_news_list\Manager\NewsListManager
+    arguments: [ '@entity_type.manager',
+                 '@Drupal\cp22_saulnier_global\Manager\BasicListOfNodesManager']

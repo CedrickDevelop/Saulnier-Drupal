@@ -1,0 +1,19 @@
+uuid: e53f3ac3-496c-4354-b538-2158252c16d6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_duration
+    - media.type.remote_video
+id: media.remote_video.field_duration
+field_name: field_duration
+entity_type: media
+bundle: remote_video
+label: Durée
+description: 'La durée de la vidéo'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,7 @@
+services:
+  Drupal\cp22_saulnier_testUnitaire\Gateway\CurrencyGateway:
+    class: Drupal\cp22_saulnier_testUnitaire\Gateway\CurrencyGateway
+
+  Drupal\cp22_saulnier_testUnitaire\Manager\CurrencyManager:
+    class: Drupal\cp22_saulnier_testUnitaire\Manager\CurrencyManager
+    arguments: ['@Drupal\cp22_saulnier_testUnitaire\Gateway\CurrencyGateway']

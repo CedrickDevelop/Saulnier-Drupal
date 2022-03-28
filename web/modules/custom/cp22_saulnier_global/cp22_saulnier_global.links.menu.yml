@@ -1,0 +1,151 @@
+#### Page Structure
+cp22_saulnier_global.structure:
+  title: "Structure"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/
+  weight: 1
+
+#### Page Structure -- Main menu
+cp22_saulnier_global.structure.main_menu:
+  title: "Modifier le menu principal"
+  parent: cp22_saulnier_global.structure
+  menu_name: contrib
+  url: internal:/admin/structure/menu/manage/main
+  weight: 0
+
+#### Page Structure -- Footer menu
+cp22_saulnier_global.structure.footer_menu:
+  title: "Modifier le menu pied de page"
+  parent: cp22_saulnier_global.structure
+  menu_name: contrib
+  url: internal:/admin/structure/menu/manage/footer
+  weight: 1
+
+
+#### Page Structure de contenu
+cp22_saulnier_global.contenu:
+  title: "Structure de contenu"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/admin/content
+  weight: 2
+
+#### Page taxonomie
+cp22_saulnier_global.taxonomie:
+  title: "Taxonomie"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy
+  weight: 20
+
+#### Page taxonomie -- thématiques
+cp22_saulnier_global.thematiques:
+  title: "Thématiques"
+  parent: cp22_saulnier_global.taxonomie
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/topics/overview
+  weight: 0
+
+cp22_saulnier_global.thematiques.show:
+  title: "Voir la liste des thématique"
+  parent: cp22_saulnier_global.thematiques
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/topics/overview
+  weight: 1
+
+cp22_saulnier_global.thematiques.add:
+  title: "Ajouter une thématique"
+  parent: cp22_saulnier_global.thematiques
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/topics/add
+  weight: 1
+
+#### Page apparence
+cp22_saulnier_global.apparence:
+  title: "Apparence"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/admin/appearance/settings/cp22_saulnier_theme
+  weight: 21
+
+#### Page apparence -- theme cp saulnier
+cp22_saulnier_global.apparence.theme:
+  title: "Modifier le logo"
+  parent: cp22_saulnier_global.apparence
+  menu_name: contrib
+  url: internal:/admin/appearance/settings/cp22_saulnier_theme
+  weight: 0
+
+
+#### Page Médias
+cp22_saulnier_global.medias:
+  title: "Media"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/admin/content/media
+  weight: 21
+
+#### Page Médias -- Voir tout
+cp22_saulnier_global.show:
+  title: "Voir tous les médias"
+  parent: cp22_saulnier_global.medias
+  menu_name: contrib
+  url: internal:/admin/content/media-grid
+  weight: 0
+
+#### Page Médias -- Images
+cp22_saulnier_global.images:
+  title: "Images"
+  parent: cp22_saulnier_global.medias
+  menu_name: contrib
+  url: internal:/admin/content/media
+  options:
+    query:
+      type[0]: 'image'
+  weight: 1
+
+cp22_saulnier_global.images.show:
+  title: "Voir la liste"
+  parent: cp22_saulnier_global.images
+  menu_name: contrib
+  url: internal:/admin/content/media
+  options:
+    query:
+      type[0]: 'image'
+  weight: 0
+
+cp22_saulnier_global.images.add:
+  title: "Ajouter"
+  parent: cp22_saulnier_global.images
+  menu_name: contrib
+  url: internal:/media/add/image
+  weight: 1
+
+#### Page Médias -- Videos
+cp22_saulnier_global.videos:
+  title: "Videos"
+  parent: cp22_saulnier_global.medias
+  menu_name: contrib
+  url: internal:/admin/content/media
+  options:
+    query:
+      type[0]: 'remote_video'
+  weight: 2
+
+cp22_saulnier_global.videos.show:
+  title: "Voir la liste"
+  parent: cp22_saulnier_global.videos
+  menu_name: contrib
+  url: internal:/admin/content/media
+  options:
+    query:
+      type[0]: 'remote_video'
+  weight: 0
+
+cp22_saulnier_global.videos.add:
+  title: "Ajouter"
+  parent: cp22_saulnier_global.videos
+  menu_name: contrib
+  url: internal:/media/add/remote_video
+  weight: 1

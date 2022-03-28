@@ -1,0 +1,19 @@
+uuid: ce7c7428-a841-4161-8ef7-515e0af005e2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chapo
+    - node.type.home
+id: node.home.field_chapo
+field_name: field_chapo
+entity_type: node
+bundle: home
+label: Chapô
+description: 'Ce texte sera présent en haut de la page en gras'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

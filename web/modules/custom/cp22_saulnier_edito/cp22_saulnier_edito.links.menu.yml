@@ -1,0 +1,41 @@
+#### Structure de contenu -- Projets Edito
+cp22_saulnier_edito.edito:
+  title: "Projets Edito"
+  parent: cp22_saulnier_global.contenu
+  menu_name: contrib
+  url: internal:/admin/content
+  options:
+    query:
+      type[0]: 'project_edito'
+  weight: 1
+
+cp22_saulnier_edito.edito.show:
+  title: "Voir tous les projets éditos"
+  parent: cp22_saulnier_edito.edito
+  menu_name: contrib
+  url: internal:/admin/content
+  options:
+    query:
+      type: 'project_edito'
+  weight: 0
+
+
+cp22_saulnier_edito.edito.show_published:
+  title: "Les projets éditos publiés"
+  parent: cp22_saulnier_edito.edito
+  menu_name: contrib
+  url: internal:/admin/content
+  options:
+    query:
+      type: 'project_edito'
+      status: 1
+  weight: 1
+
+cp22_saulnier_edito.edito.add:
+  title: "Ajouter une page projet"
+  parent: cp22_saulnier_edito.edito
+  menu_name: contrib
+  url: internal:/node/add/project_edito
+  weight: 2
+
+

@@ -1,0 +1,825 @@
+//Homepage layout
+
+.HomePage-headerWrapper {
+
+  max-width: $desktop-width;
+
+  a {
+    cursor: pointer;
+  }
+
+  .MainHeader {
+
+    &-cover {
+      height: 80rem;
+      //width:100%;
+      position:relative;
+
+      .cover-img {
+        height: 80rem;
+        //width: 100%;
+        overflow: hidden;
+
+        article {
+          height: 100%;
+          @include screenMaxWidth($homepage-breakpoint-mobile-900){
+            position: relative;
+          }
+
+          img {
+            max-width: none;
+            object-fit: cover;
+            @include screenMaxWidth($homepage-breakpoint-1530){
+              min-height: 100%;
+            }
+            @include screenMaxWidth($homepage-breakpoint-mobile-900){
+              position: absolute;
+              left: -30rem;
+            }
+          }
+        }
+
+
+      }
+      &::before {
+        content:"";
+        width:30.1rem;
+        height: 3rem;
+
+        position: absolute;
+        right: 0;
+        top:-1.5rem;
+
+        background-color: $color-text-red;
+        z-index: 102;
+
+        @include screenMaxWidth($homepage-breakpoint-1850){
+          width:27.1rem;
+        }
+
+        @include screenMaxWidth($homepage-breakpoint-1700){
+          width:22.1rem;
+        }
+
+        @include screenMaxWidth($tablet-width){
+          width:10.5rem;
+          height: 2rem;
+          top:-1rem;
+        }
+      }
+
+      &::after {
+        content:"";
+        width: calc(50% - 3rem);
+        max-width: 70rem;
+        height: 3rem;
+
+        position: absolute;
+        left: 0;
+        bottom: -1.5rem;
+
+        background-color: $color-text-red;
+        z-index: 10;
+        @include screenMaxWidth($homepage-breakpoint-1650){
+          max-width: 50rem;
+        }
+      }
+
+
+    }
+
+    &-intro {
+      width: $homepage-desktop-content-width;
+      height: auto; // Verfier la hauteur par la suite
+      padding:4.5rem;
+      margin-left: $homepage-desktop-margin-left;
+
+      position: absolute;
+      top:49rem;
+
+      box-shadow: 0 0.3rem 3.6rem $color-shadow-light-grey ;
+      background-color: $color-white;
+      text-align: left;
+      z-index: 11;
+
+      @include screenMaxWidth($homepage-breakpoint-1850){
+        margin-left: $homepage-margin-breakpoint-1850;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-1700){
+        margin-left: $homepage-margin-breakpoint-1700;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-1650 ){
+        width : $homepage-width-1650-block-left;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-1380 ){
+        width : $homepage-width-1380-block-left;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-mobile ){
+        width: 80%;
+        margin: 0 10%;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-mobile-900 ){
+        top:42.65rem;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-mobile-750 ){
+        top:36.3rem;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+        width: auto;
+        padding: 4rem 2rem;
+        margin: 0 1.65rem;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-mobile-500 ){
+        top:23.6rem;
+      }
+
+
+
+      h1 {
+        margin-bottom: 4rem;
+        font-size: 4rem;
+        font-weight: bold;
+        line-height: 4.8rem;
+        text-transform: uppercase;
+        color: $color-textBlue;
+
+        @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+          font-size: 3rem;
+          line-height: 3.6rem;
+          margin-bottom: 3rem;
+        }
+      }
+
+      p {
+        margin-bottom: 3rem;
+
+        font-size: 2.2rem;
+        line-height: 2.7rem;
+        color: $color-text-grey;
+
+
+      }
+
+      a {
+        @include button-homepage-blue(
+        49.6rem, 62.9rem, 0.8rem);
+
+        @include screenMaxWidth($homepage-breakpoint-1380 ){
+          max-width : $homepage-width-1380-block-left;
+          min-width : 40rem;
+        }
+
+        @include screenMaxWidth($homepage-breakpoint-mobile-750 ){
+          border-radius: 3.7rem;
+        }
+
+        @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+          max-width : 100%;
+          min-width: 26.2rem;
+          width:100%;
+          font-size: 1.5rem;
+          border-radius: 3.7rem;
+        }
+
+
+      }
+    }
+  }
+
+}
+
+.HomePage-contentWrapper {
+
+  display: flex;
+  margin-left: $homepage-desktop-margin-left;
+  position: relative;
+
+  @include screenMaxWidth($homepage-breakpoint-1850){
+    margin-left: $homepage-margin-breakpoint-1850;
+  }
+
+  @include screenMaxWidth($homepage-breakpoint-1700){
+    margin-left: $homepage-margin-breakpoint-1700;
+  }
+
+  @include screenMaxWidth($homepage-breakpoint-mobile ){
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+    width: auto;
+    padding: 4rem 2rem;
+  }
+
+
+  .MainContent {
+
+    &-edito {
+      margin-right: 10.8rem;
+      margin-top: 39.7rem;
+      margin-bottom: 5rem;
+
+      @include screenMaxWidth($homepage-breakpoint-1850 ){
+        margin-top: 20.7rem;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-1650 ){
+        margin-top: 32.7rem;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-1380 ){
+        margin-top: 40.7rem;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-mobile ){
+        width: 80%;
+        margin: 5rem 0 -6rem 0;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+        width: 100%;
+      }
+
+      .ParagraphSeeMore {
+
+        @include screenMaxWidth($homepage-breakpoint-1380 ){
+          width: $homepage-width-1380-block-left ;
+        }
+
+        @include screenMaxWidth($homepage-breakpoint-mobile ){
+          width: 100% ;
+        }
+
+        @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+          width: calc(100% - 3.4rem);
+        }
+
+
+        &-title {
+          text-align: left;
+
+          @include screenMaxWidth($homepage-breakpoint-mobile-500 ){
+            margin-bottom: 3rem;
+          }
+        }
+
+        .NodeEditoTeaser {
+          @include screenMaxWidth($homepage-breakpoint-1650 ){
+            width: $homepage-width-1650-block-left;
+            height: auto;
+            margin-bottom: 3rem;
+          }
+
+          @include screenMaxWidth($homepage-breakpoint-1380 ){
+            width: $homepage-width-1380-block-left ;
+            height: auto;
+            margin-bottom: 3rem;
+          }
+          @include screenMaxWidth($homepage-breakpoint-mobile ){
+            width: 100% ;
+          }
+          @include screenMaxWidth($homepage-breakpoint-mobile-900 ){
+            height: auto;
+            margin-bottom: 3rem;
+          }
+
+          @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+            width: 100%;
+          }
+
+          &-image {
+            @include screenMaxWidth($homepage-breakpoint-1380 ){
+              height: auto;
+              max-width: $homepage-width-1380-block-left ;
+            }
+
+            @include screenMaxWidth($homepage-breakpoint-mobile ){
+              max-width: 100% ;
+              width: 100%;
+            }
+            @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+              width: 100%;
+            }
+            @include screenMaxWidth($homepage-breakpoint-mobile-500 ){
+              height: 20rem ;
+              width:100%;
+              overflow: hidden;
+            }
+            a {
+              @include screenMaxWidth($homepage-breakpoint-1650 ) {
+                height: 100%;
+              }
+              article {
+                @include screenMaxWidth($homepage-breakpoint-1650 ) {
+                  height: 100%;
+                }
+
+                picture {
+                  @include screenMaxWidth($homepage-breakpoint-1650 ) {
+                    height: 100%;
+                  }
+
+                  img {
+                    @include screenMaxWidth($homepage-breakpoint-1650 ) {
+                      height: 100%;
+                      max-width: none;
+                      width: initial;
+                    }
+
+                  }
+                }
+              }
+            }
+
+          }
+          &-contentWrapper {
+            @include screenMaxWidth($homepage-breakpoint-mobile ){
+              padding: 3.5rem 2.5rem 3.5rem 2.5rem;
+            }
+
+            @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+              padding: 2.5rem 2rem 3rem 2rem;
+            }
+            .contentWrapper {
+
+              &-title {
+                a {
+                  @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+                    font-size: 2.7rem;
+                    line-height: 3rem;
+                  }
+
+                  @include screenMaxWidth($homepage-breakpoint-mobile-500 ){
+                    font-size: 2.2rem;
+                    line-height: 2.7rem;
+                  }
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-edito-nonews {
+      width:100%;
+      margin-right: 14rem;
+      margin-top: 15rem;
+      margin-bottom: 5rem;
+
+      @include screenMaxWidth($homepage-breakpoint-1700 ){
+        margin-right: 5rem;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-1650 ){
+        margin-top: 30rem;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-mobile ){
+        margin-right: 0;
+      }
+
+      @include screenMaxWidth(690px ){
+        width: 100%;
+        margin-top: 40rem;
+      }
+
+      @include screenMaxWidth(630px ){
+        margin-top: 25rem;
+      }
+
+      @include screenMaxWidth(585px ){
+        margin-top: 30rem;
+      }
+
+      @include screenMaxWidth(421px ){
+        margin-top: 40rem;
+      }
+
+      @include screenMaxWidth(376px ){
+        margin-top: 45rem;
+      }
+
+      .ParagraphSeeMore {
+
+        width: calc(100% - 28rem);
+
+        @include screenMaxWidth(1550px ){
+          width: 100%;
+          margin: auto 0 ;
+        }
+
+        &-title {
+          width: calc(100% - 28rem);
+          margin: 5rem auto;
+
+          @include screenMaxWidth($homepage-breakpoint-1650 ){
+            width: calc(100% - 28rem);
+            margin: 2rem auto;
+          }
+
+          @include screenMaxWidth(500px ){
+            width: 100%;
+          }
+
+
+        }
+
+        .NodePosition {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          @include screenMaxWidth(1550px ){
+            flex-direction: column;
+          }
+
+          &-column {
+            margin: auto 5rem;
+            width: 100%;
+
+            @include screenMaxWidth($homepage-breakpoint-1650 ){
+              margin: auto 2rem;
+            }
+
+            @include screenMaxWidth(1550px ){
+              width: 100%;
+              margin: auto 0;
+            }
+
+            .NodeEditoTeaser {
+              width: 80%;
+              max-width: 80%;
+
+              @include screenMaxWidth(870px ){
+                width: 90%;
+                max-width: 90%;
+              }
+
+              &-image {
+
+                a {
+                  article {
+                    picture {
+                      img {
+                        @include screenMaxWidth(870px ){
+                          width: 100%;
+                          height: 100%;
+                          max-width: none;
+                        }
+
+                        @include screenMaxWidth(730px ){
+                          width: initial;
+                          height: 100%;
+                          max-width: none;
+                        }
+                      }
+                    }
+                  }
+                }
+
+
+              }
+
+              &-contentWrapper {
+                min-height: 20rem;
+
+                .contentWrapper-title {
+                  @include screenMaxWidth(900px ){
+                    font-size: 3rem;
+                    line-height: 3.2rem;
+                  }
+
+                  @include screenMaxWidth(700px ){
+                    font-size: 2.7rem;
+                    line-height: 3rem;
+                  }
+
+                  @include screenMaxWidth(500px ){
+                    font-size: 2.2rem;
+                    line-height: 2.7rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    &-news {
+      max-width: 95.2rem;
+      width:95.2rem;
+      height: auto;
+
+      position:absolute;
+      top: -9.2rem;
+      right: 0;
+
+      padding:8.1rem 14rem 10rem 14.2rem;
+
+      background-color: $color-homepage-block;
+      text-align: left;
+
+      @include screenMaxWidth($homepage-breakpoint-mobile ){
+        position:initial;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-1850){
+        width:87.2rem;
+        padding:8.1rem $homepage-margin-breakpoint-1850 $homepage-margin-breakpoint-1850 $homepage-margin-breakpoint-1850;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-1700 ){
+        width:80.2rem;
+        padding:8.1rem $homepage-margin-breakpoint-1700 $homepage-margin-breakpoint-1700 $homepage-margin-breakpoint-1700;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-1650 ){
+        width:72.2rem;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-1380 ){
+        width: 65rem;
+        padding : 4rem $homepage-margin-breakpoint-1700 ;
+        height: auto;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-1225 ){
+        width: 55rem;
+        padding : 4rem 2rem 4rem 4rem ;
+        height: auto;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-mobile ){
+        width: 80%;
+        margin-top: 20rem;
+        padding: 5rem 4.5rem 4rem 5rem;
+        height: auto;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-mobile-900 ){
+        margin-top: 15rem;
+      }
+
+      @include screenMaxWidth(800px ){
+        margin-top: 20rem;
+      }
+
+      @include screenMaxWidth(700px ){
+        margin-top: 25rem;
+      }
+
+      @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+        width: 100%;
+        padding: 5rem 2.05rem 4rem 1.95rem;
+        margin-top: 5rem;
+      }
+
+      @include screenMaxWidth(550px){
+        margin-top: 15rem;
+      }
+
+      @include screenMaxWidth(410px){
+        margin-top: 22rem;
+      }
+
+
+      .news-title {
+        h2 {
+          font-size: 4rem;
+          font-weight: bold;
+          letter-spacing: 0;
+          line-height: 4.8rem;
+          color: $color-white;
+          text-transform: uppercase;
+          margin-left: 2rem;
+
+          @include screenMaxWidth($homepage-breakpoint-1700){
+            margin-left: 4rem;
+          }
+          @include screenMaxWidth($homepage-breakpoint-1650 ){
+            margin-left: 0;
+          }
+
+          @include screenMaxWidth($homepage-breakpoint-1380 ){
+            font-size: 3.2rem;
+          }
+          @include screenMaxWidth($homepage-breakpoint-1225 ){
+            font-size: 2.9rem;
+          }
+
+        }
+      }
+
+      .news-nodes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+
+        .NodeNewsTeaserHome {
+          @include screenMaxWidth($homepage-breakpoint-1380 ){
+            width: 55.5rem;
+          }
+          @include screenMaxWidth($homepage-breakpoint-1225 ){
+            width: 45.5rem;
+          }
+
+          @include screenMaxWidth($homepage-breakpoint-mobile ){
+            width: 100%;
+          }
+
+          @include screenMaxWidth($homepage-breakpoint-mobile-500 ){
+            margin-bottom: 0;
+          }
+
+          a {
+            min-height: 14rem;
+
+            @include screenMaxWidth($homepage-breakpoint-mobile ){
+              justify-content: space-between;
+              min-height: 15.5rem;
+            }
+            @include screenMaxWidth($homepage-breakpoint-mobile-500 ){
+              position: relative;
+              padding-top: 3.3rem;
+              margin-bottom: 3rem;
+            }
+
+            .NewsContent {
+              @include screenMaxWidth($homepage-breakpoint-1225 ){
+                width: 45rem;
+              }
+              @include screenMaxWidth($homepage-breakpoint-mobile ){
+                width: 70%;
+              }
+              @include screenMaxWidth($homepage-breakpoint-mobile-750 ){
+                padding: 0;
+              }
+
+            }
+
+            .NewsContent-theme {
+              @include screenMaxWidth($homepage-breakpoint-1380 ){
+                font-size: 1.4rem;
+              }
+              @include screenMaxWidth($homepage-breakpoint-mobile-500 ){
+                position: absolute;
+                top: 0;
+              }
+            }
+
+            .NewsContent-title {
+              font-weight: bold;
+
+              @include screenMaxWidth($homepage-breakpoint-1380 ){
+                font-size: 2.5rem;
+              }
+              @include screenMaxWidth($homepage-breakpoint-mobile-750 ){
+                margin:0;
+                margin-bottom: 3.4rem;
+                padding-right: 0.7rem;
+              }
+
+              @include screenMaxWidth($homepage-breakpoint-mobile-500 ){
+                margin:0;
+                margin-bottom: 3rem;
+                padding-right: 0.7rem;
+              }
+              //@include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+              //  width:60%;
+              //}
+            }
+
+            .NodeNewsWrapper-cover {
+
+              @include screenMaxWidth($homepage-breakpoint-1650 ){
+                width: 10rem;
+              }
+
+              @include screenMaxWidth($homepage-breakpoint-1225 ){
+                width: 10rem;
+              }
+
+              @include screenMaxWidth($homepage-breakpoint-mobile ){
+                width:30%;
+                display: flex;
+                justify-content: flex-end;
+                align-self: flex-end;
+              }
+
+              @include screenMaxWidth($homepage-breakpoint-mobile-750 ){
+                align-items: flex-end;
+                overflow: hidden;
+
+
+              }
+
+              @include screenMaxWidth($homepage-breakpoint-mobile-630 ){
+                width:12rem;
+                overflow: hidden;
+                align-self: center;
+                img {
+                  height: 12rem;
+                  width:auto;
+                }
+              }
+
+            }
+          }
+
+
+        }
+
+
+      }
+
+      .news-listPage {
+        //input {
+        //  @include button-homepage-red(
+        //    26.6rem, 40.8rem, 0)
+        //}
+
+        margin-left: 2rem;
+
+        @include screenMaxWidth($homepage-breakpoint-1700){
+          margin-left: 4rem;
+        }
+        @include screenMaxWidth($homepage-breakpoint-1650 ){
+          margin-left: 0;
+        }
+
+
+
+
+
+
+        a {
+          min-width:26.6rem;
+          max-width: 40.8rem;
+          min-height: 5rem;
+          margin-top: 3.5rem;
+
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+
+          border: 0.1rem solid $color-homepage-button-red;
+          border-radius: 2.5rem;
+          background-color: $color-homepage-button-red;
+
+          @include screenMaxWidth($homepage-breakpoint-1225 ){
+            margin-top:1rem;
+          }
+
+          input {
+            border:none;
+            outline:none;
+            background-color: $color-homepage-button-red;
+
+            font-size: 2rem;
+            line-height: 2.4rem;
+            color: $color-white;
+
+            input::after {
+              content:"\f061";
+              @extend %_fontAwesomeBase;
+
+              margin-left: 1rem;
+              font-size: 2rem;
+
+              line-height: 2.5rem;
+              color: $color-white;
+
+            }
+          }
+
+
+        }
+      }
+    }
+  }
+}
+
+
+#intro-nonews {
+  width : 90%;
+  margin: 20rem 5% auto 5%;
+}

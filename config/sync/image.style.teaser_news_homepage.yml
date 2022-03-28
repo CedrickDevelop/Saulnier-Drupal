@@ -1,0 +1,15 @@
+uuid: 7275d938-cfdc-41f8-a95e-d5e2941d18d7
+langcode: fr
+status: true
+dependencies: {  }
+name: teaser_news_homepage
+label: 'Teaser News Homepage (140x140)'
+effects:
+  3a50f700-d4ab-480d-a844-0d8596091896:
+    uuid: 3a50f700-d4ab-480d-a844-0d8596091896
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 140
+      height: 140
+      anchor: center-center

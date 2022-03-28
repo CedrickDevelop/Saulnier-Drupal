@@ -1,0 +1,43 @@
+uuid: fcf9068f-4fc3-431f-8d41-918377c6776c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta.field_link
+    - field.field.paragraph.cta.field_title
+    - field.field.paragraph.cta.field_visual
+    - paragraphs.paragraphs_type.cta
+  module:
+    - link
+    - media_library
+id: paragraph.cta.default
+targetEntityType: paragraph
+bundle: cta
+mode: default
+content:
+  field_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_visual:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

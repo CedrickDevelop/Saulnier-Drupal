@@ -1,0 +1,29 @@
+uuid: dc4c802e-685e-4cb9-87a2-26080d1af0eb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_riseup
+    - node.type.project_edito
+    - paragraphs.paragraphs_type.see_more
+id: paragraph.see_more.field_riseup
+field_name: field_riseup
+entity_type: paragraph
+bundle: see_more
+label: Remontée
+description: 'Inscrire maximum 4 éléments dans cette partie'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      project_edito: project_edito
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

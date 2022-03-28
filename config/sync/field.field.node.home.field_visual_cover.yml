@@ -1,0 +1,29 @@
+uuid: 739fac11-2fe1-44f4-8447-feea5e089e04
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visual_cover
+    - media.type.image
+    - node.type.home
+id: node.home.field_visual_cover
+field_name: field_visual_cover
+entity_type: node
+bundle: home
+label: 'Image de couverture'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

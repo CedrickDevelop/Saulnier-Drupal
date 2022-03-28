@@ -1,0 +1,46 @@
+uuid: c23504dc-147c-4ba4-86cf-cc6d4bb8ab8d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.project_edito
+    - paragraphs.paragraphs_type.cta
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.see_more
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.project_edito.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: project_edito
+label: 'Contenu principal'
+description: 'Le contenu principal de la page '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cta: cta
+      media: media
+      wysiwyg: wysiwyg
+      see_more: see_more
+    negate: 0
+    target_bundles_drag_drop:
+      cta:
+        weight: 3
+        enabled: true
+      media:
+        weight: 4
+        enabled: true
+      see_more:
+        weight: 7
+        enabled: true
+      wysiwyg:
+        weight: 6
+        enabled: true
+field_type: entity_reference_revisions

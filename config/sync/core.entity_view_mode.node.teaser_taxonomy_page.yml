@@ -1,0 +1,10 @@
+uuid: d94db196-249f-4290-b3a6-4547636327c4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_taxonomy_page
+label: 'Teaser Page de Taxonomie'
+targetEntityType: node
+cache: true

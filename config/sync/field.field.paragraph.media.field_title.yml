@@ -1,0 +1,19 @@
+uuid: 110d1b3b-39c2-48d2-b661-84c5813d380d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.media
+id: paragraph.media.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: media
+label: Titre
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: b3357e2e-2481-4d3b-a405-b90e49cde94c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.home
+  module:
+    - path
+id: node.home.path
+field_name: path
+entity_type: node
+bundle: home
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
